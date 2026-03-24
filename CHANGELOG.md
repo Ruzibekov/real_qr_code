@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.2 — 2026-03-24
+
+- Added comprehensive README documentation for Flutter and Web packages
+- Added screenshot to README
+- Added framework examples (React, Vue, Nuxt, Vanilla JS)
+
 ## 0.0.1 — 2026-03-24
 
 - QR kod generatsiya qiluvchi Flutter kutubxona yaratildi

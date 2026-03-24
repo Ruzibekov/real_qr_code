@@ -14,7 +14,7 @@ Available for **Flutter** (pub.dev) and **Web** (npm).
 
 ```yaml
 dependencies:
-  real_qr_code: ^0.0.1
+  real_qr_code: ^0.0.2
 ```
 
 ### Usage
