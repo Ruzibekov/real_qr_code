@@ -1,0 +1,24 @@
+name: real_qr_code
+description: A Flutter QR code generator with stylized rounded finder patterns, blob-effect data modules, and a center space for logo overlay.
+version: 0.0.1
+homepage: https://github.com/AzimovRuzibekov/real_qr_code
+repository: https://github.com/AzimovRuzibekov/real_qr_code
+issue_tracker: https://github.com/AzimovRuzibekov/real_qr_code/issues
+topics:
+  - qr-code
+  - qr
+  - widget
+
+environment:
+  sdk: ^3.7.0
+  flutter: ">=3.29.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  qr: ^3.0.2
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+
+flutter:

@@ -1,0 +1,33 @@
+# Flutter
+.dart_tool/
+build/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+.idea/
+
+# Pub
+pubspec.lock
+
+# Example platform files
+example/android/
+example/ios/
+example/linux/
+example/macos/
+example/windows/
+example/web/
+example/.idea/
+example/.dart_tool/
+example/build/
+example/*.iml
+example/.gitignore
+example/README.md
+
+# Web package
+packages/web/node_modules/
+packages/web/dist/
+
+# Misc
+.DS_Store
+firebase-debug.log

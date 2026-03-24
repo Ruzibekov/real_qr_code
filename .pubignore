@@ -1,0 +1,17 @@
+packages/
+.idea/
+.dart_tool/
+build/
+firebase-debug.log
+*.iml
+example/android/
+example/ios/
+example/linux/
+example/macos/
+example/windows/
+example/web/
+example/.idea/
+example/.dart_tool/
+example/build/
+example/*.iml
+example/README.md
