@@ -67,12 +67,15 @@ class QrModuleResolver {
   }
 
   bool _isInCenterSpace(int row, int col) {
-    final int center = _moduleCount ~/ 2;
-    final int half = _centerClearModules ~/ 2;
-    return row >= center - half &&
-        row < center + half &&
-        col >= center - half &&
-        col < center + half;
+    final double center = (_moduleCount - 1) / 2.0;
+    final double half = _centerClearModules / 2.0;
+    final double dx = (row - center).abs();
+    final double dy = (col - center).abs();
+    if (dx > half || dy > half) return false;
+    final double innerHalf = half - 1.0;
+    if (dx <= innerHalf && dy <= innerHalf) return true;
+    final int hash = (row * 31 + col * 17 + _moduleCount * 7) & 0xFFFF;
+    return hash % 4 != 0;
   }
 
   bool hasNeighbor(int row, int col, int dRow, int dCol) {

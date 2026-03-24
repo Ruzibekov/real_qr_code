@@ -62,9 +62,15 @@ export class QrModuleResolver {
   }
 
   private isInCenterSpace(row: number, col: number): boolean {
-    const center = Math.floor(this.moduleCount / 2);
-    const half = Math.floor(this.centerClearModules / 2);
-    return row >= center - half && row < center + half && col >= center - half && col < center + half;
+    const center = (this.moduleCount - 1) / 2;
+    const half = this.centerClearModules / 2;
+    const dx = Math.abs(row - center);
+    const dy = Math.abs(col - center);
+    if (dx > half || dy > half) return false;
+    const innerHalf = half - 1.0;
+    if (dx <= innerHalf && dy <= innerHalf) return true;
+    const hash = (row * 31 + col * 17 + this.moduleCount * 7) & 0xFFFF;
+    return hash % 4 !== 0;
   }
 
   private static computeAlignmentCenters(moduleCount: number): AlignmentCenter[] {

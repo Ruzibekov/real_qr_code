@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.0.3 — 2026-03-24
+
+- Added `logoSize` parameter — controls logo display size independently from center space
+- Organic center space edges — border modules are partially kept for natural look instead of strict geometric shape
+- Center space shape: square core with rough organic edges (not pure circle or rectangle)
+- Web (npm): synced center space logic with Flutter version
+
 ## 0.0.2 — 2026-03-24
 
 - Added comprehensive README documentation for Flutter and Web packages

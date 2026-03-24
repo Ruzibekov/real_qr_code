@@ -9,6 +9,7 @@ class RealQrCode extends StatelessWidget {
   final Color color;
   final Color backgroundColor;
   final Widget? logo;
+  final double? logoSize;
   final double borderRadius;
   final double finderPatternRadiusFraction;
   final double dataModuleRadiusFraction;
@@ -21,6 +22,7 @@ class RealQrCode extends StatelessWidget {
     this.color = const Color(0xFF0E121B),
     this.backgroundColor = const Color(0xFFF7F8F9),
     this.logo,
+    this.logoSize,
     this.borderRadius = 16,
     this.finderPatternRadiusFraction = 1.2,
     this.dataModuleRadiusFraction = 0.45,
@@ -55,9 +57,9 @@ class RealQrCode extends StatelessWidget {
                 IconTheme(
                   data: IconThemeData(color: color),
                   child: SizedBox(
-                    width: centerSpaceSize,
-                    height: centerSpaceSize,
-                    child: logo,
+                    width: logoSize ?? centerSpaceSize,
+                    height: logoSize ?? centerSpaceSize,
+                    child: Center(child: logo),
                   ),
                 ),
             ],
